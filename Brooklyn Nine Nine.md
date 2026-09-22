@@ -18,18 +18,18 @@ We're now focusing on ports 21(ftp) and 80(web). In old or misconfigured version
 
 # Breaking into SSH
 We know that there's ssh service running on port 22. We'd like to access it with Jake's weak password. To achieve this we can use Hydra - brute force tool that helps breaking into various services
-![](images/screen5 1.png)
+![](images/screen5.png)
 **We got it!** We've ran Hydra with "jake" username and passwords list "rockyou.txt". Note that we used lowercase version of username (it's standard in unix like systems). Now with his credentials we can log into SSH.
 
 # Post-exploitation
-![](images/screen6 1.png)
+![](images/screen6.png)
 After logging in and short walk-around we've found **user flag!** It was hidden in other's user folder in /home directory
 **Now we have to find our way to root!**
 # Privilege escalation and getting root flag!
 ![](images/screen7.png)By running ``sudo -l`` command we checkd what are we able to run with sudo privileges. We see that "less" tool let us run it with sudo. Lets try it!
 
-![](images/screen8 1.png)
+![](images/screen8.png)
 Now we run ``!/bin/bash`` in Less tool. It creates subprocess for current running tool with the same privileges that program has. So if we run the command with sudo privileges, we should get root shell!
 
-![](images/screen9 2.png)
+![](images/screen9.png)
 **And congrats!** After running command we gained root access. Now we've done little walk-around and found root flag! Our machine is finished!
