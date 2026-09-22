@@ -6,7 +6,7 @@ Difficulty: easy
 ## Step 1 - Ping + nmap
 First step is to gain some awareness about our target. First i've decided to ping THM Machine to verify vpn connection. Next I ran basic **Nmap** scan to see what ports we have open. 
 
-![[screen1.png]]As you can see, we have 3 standard ports open. Let's break those ports:
+![Nmap Scan](images/screen1.png)As you can see, we have 3 standard ports open. Let's break those ports:
 21/tcp -> typically ftp service
 22/tcp -> most likely ssh service
 80/tcp -> standard for websites
