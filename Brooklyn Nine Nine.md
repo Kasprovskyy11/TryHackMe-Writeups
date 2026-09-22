@@ -1,5 +1,7 @@
 Writeup date: 21.09.2026
+
 Name of challenge: Brooklyn Nine Nine
+
 Difficulty: easy
 
 # Reconnaissance
